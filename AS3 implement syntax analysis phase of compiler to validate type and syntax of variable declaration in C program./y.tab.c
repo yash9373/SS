@@ -97,10 +97,7 @@ int yyerror();
 #  endif
 # endif
 
-/* Use api.header.include to #include this header
-   instead of duplicating it here.  */
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -151,7 +148,7 @@ extern YYSTYPE yylval;
 int yyparse (void);
 
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+
 /* Symbol kind.  */
 enum yysymbol_kind_t
 {
@@ -1112,11 +1109,11 @@ yyreduce:
   case 2: /* start: TYPE varlist SC NL  */
 #line 9 "var1.y"
                                 {printf("valid declarative statement");}
-#line 1116 "y.tab.c"
+#line 1113 "y.tab.c"
     break;
 
 
-#line 1120 "y.tab.c"
+#line 1117 "y.tab.c"
 
       default: break;
     }
@@ -1325,3 +1322,6 @@ int main()
 {
 yyparse();
 }
+/*It defines a common language (the token types) that both files understand.
+The lex file uses this agreement to recognize patterns and assign them appropriate token types.
+The yacc file then uses these token types to build the parse tree and understand the structure of the input.*/

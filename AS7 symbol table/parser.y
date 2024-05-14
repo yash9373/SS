@@ -55,7 +55,7 @@ void addSymbols(char* type,char* symbols){
   }
 }
 
-void addToTable(char type, char id){
+void addToTable(char *type, char *id){
   SymbolEntry *entry = (SymbolEntry * )malloc(sizeof(SymbolEntry));
   entry->type = type;
   entry->symbol = id;
